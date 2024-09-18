@@ -6,6 +6,15 @@ import LocationIcon from "./components/icons/LocationIcon";
 import PhoneIcon from "./components/icons/PhoneIcon";
 import { TextWithIcon } from "./components/lists/textIconList/TextIconList";
 
+// Software Developer
+// AXA Health | Royal Tunbridge Wells
+// Sep 2022 - Present
+// Employed as apprentice, but completed with a maximum grade of 'Distinction' in August 2024.
+// Received 'Excellent' end-of-year rating during 2023 performance review.
+// Worked within the Mobile App Team, following internal standards/conventions, and within GDPR principles. Migrated entire data caching/fetching behaviour from Redux Sagas to RTK Query.
+// Implemented custom component design system, creating reusable, accessible components throughout a large codebase.
+// Followed UI/UX designs, ensuring ideal customer/user experience and app performance
+
 interface CVData {
   image: string;
   fullName: string;
@@ -13,6 +22,20 @@ interface CVData {
   personalIntroduction: string;
   personalDetails: TextWithIcon[];
   interests: TextWithIcon[];
+  workExperience: {
+    jobRole: string;
+    companyName: string;
+    location: string;
+    startDate: {
+      month: number;
+      year: number;
+    };
+    endDate: {
+      month: number;
+      year: number;
+    } | null;
+    responsibilities: string[];
+  }[];
 }
 
 export const data: CVData = {
@@ -49,6 +72,25 @@ export const data: CVData = {
     {
       value: "Hiking",
       Icon: HikingIcon,
+    },
+  ],
+  workExperience: [
+    {
+      jobRole: "Software Developer",
+      companyName: "AXA Health",
+      location: "Tunbridge Wells",
+      startDate: {
+        month: 8,
+        year: 2022,
+      },
+      endDate: null,
+      responsibilities: [
+        'Employed as apprentice, but completed with a maximum grade of "Distinction" in August 2024.',
+        'Received "Excellent" end-of-year rating during 2023 performance review.',
+        "Worked within the Mobile App Team, following internal standards/conventions, and within GDPR principles. Migrated entire data caching/fetching behaviour from Redux Sagas to RTK Query.",
+        "Implemented custom component design system, creating reusable, accessible components throughout a large codebase.",
+        "Followed UI/UX designs, ensuring ideal customer/user experience and app performance",
+      ],
     },
   ],
 };
