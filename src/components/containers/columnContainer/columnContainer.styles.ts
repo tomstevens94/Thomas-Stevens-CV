@@ -1,12 +1,12 @@
 import { CSSProperties } from "react";
 import { theme } from "../../../theme/constants";
 
-const container: CSSProperties = {
-  padding: theme.gap,
+const container = (gap: number): CSSProperties => ({
+  padding: theme.gap.med,
   flexDirection: "column",
   display: "flex",
-  gap: theme.gap,
-};
+  gap,
+});
 
 export const styles = {
   container,

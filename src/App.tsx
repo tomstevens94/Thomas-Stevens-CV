@@ -4,6 +4,7 @@ import PersonalDetails from "./components/personalDetails/PersonalDetails";
 import Interests from "./components/interests/Interests";
 import RowContainer from "./components/containers/rowContainer/RowContainer";
 import ColumnContainer from "./components/containers/columnContainer/ColumnContainer";
+import { theme } from "./theme/constants";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         <PersonalIntroduction />
       </RowContainer>
       <RowContainer>
-        <ColumnContainer>
+        <ColumnContainer gap={theme.gap.xLarge}>
           <PersonalDetails />
           <Interests />
         </ColumnContainer>
