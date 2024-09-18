@@ -1,5 +1,7 @@
+import CookingIcon from "./components/icons/CookingIcon";
 import EmailIcon from "./components/icons/EmailIcon";
 import GithubIcon from "./components/icons/GithubIcon";
+import HikingIcon from "./components/icons/HikingIcon";
 import LocationIcon from "./components/icons/LocationIcon";
 import PhoneIcon from "./components/icons/PhoneIcon";
 import { TextWithIcon } from "./components/lists/textIconList/TextIconList";
@@ -41,16 +43,12 @@ export const data: CVData = {
   ],
   interests: [
     {
-      value: "07707513924",
-      Icon: PhoneIcon,
+      value: "Cooking/Baking",
+      Icon: CookingIcon,
     },
     {
-      value: "tommstevens94@gmail.com",
-      Icon: EmailIcon,
-    },
-    {
-      value: "Eastbourne, East Sussex",
-      Icon: LocationIcon,
+      value: "Hiking",
+      Icon: HikingIcon,
     },
   ],
 };
