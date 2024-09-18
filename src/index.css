@@ -8,6 +8,7 @@
 }
 
 body {
+  /* Hard-coded dimensions to match A4 when printing */
   width: 794px;
   height: 1123px;
 
@@ -26,4 +27,8 @@ code {
 
 p {
   font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
 }
