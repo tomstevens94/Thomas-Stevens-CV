@@ -16,6 +16,6 @@ export const theme: Theme = {
   iconSize: 16,
 
   colors: {
-    main: "#09314c",
+    main: "#1c2b35",
   },
 };
