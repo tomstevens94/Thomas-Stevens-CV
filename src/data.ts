@@ -6,14 +6,25 @@ import LocationIcon from "./components/icons/LocationIcon";
 import PhoneIcon from "./components/icons/PhoneIcon";
 import { TextWithIcon } from "./components/lists/textIconList/TextIconList";
 
-// Software Developer
-// AXA Health | Royal Tunbridge Wells
-// Sep 2022 - Present
-// Employed as apprentice, but completed with a maximum grade of 'Distinction' in August 2024.
-// Received 'Excellent' end-of-year rating during 2023 performance review.
-// Worked within the Mobile App Team, following internal standards/conventions, and within GDPR principles. Migrated entire data caching/fetching behaviour from Redux Sagas to RTK Query.
-// Implemented custom component design system, creating reusable, accessible components throughout a large codebase.
-// Followed UI/UX designs, ensuring ideal customer/user experience and app performance
+interface WorkExperience {
+  jobRole: string;
+  companyName: string;
+  location: string;
+  startDate: {
+    month: string;
+    year: number;
+  };
+  endDate: {
+    month: string;
+    year: number;
+  } | null;
+  responsibilities?: string[];
+}
+
+interface Skill {
+  title: string;
+  level: number;
+}
 
 interface CVData {
   image: string;
@@ -22,20 +33,8 @@ interface CVData {
   personalIntroduction: string;
   personalDetails: TextWithIcon[];
   interests: TextWithIcon[];
-  workExperience: {
-    jobRole: string;
-    companyName: string;
-    location: string;
-    startDate: {
-      month: number;
-      year: number;
-    };
-    endDate: {
-      month: number;
-      year: number;
-    } | null;
-    responsibilities: string[];
-  }[];
+  workExperience: WorkExperience[];
+  skills: Skill[];
 }
 
 export const data: CVData = {
@@ -44,10 +43,10 @@ export const data: CVData = {
   fullName: "Thomas Stevens",
   jobRole: "Full Stack Mobile Developer",
   personalIntroduction:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cupiditate, eveniet deserunt sed nisi quidem ab est soluta sint nam ad quia magniaccusamus ratione sequi, debitis doloribus fuga facere?",
+    "Passionate Software Developer skilled in full-stack mobile development, specialising in React Native, NodeJS, JavaScript, HTML and CSS. Commended for strong problem-solving skills and excellent communication. \n\nCurrently solo developing Prove It, a production iOS App focused on bread baking.",
   personalDetails: [
     {
-      value: "07707513924",
+      value: "07707 513924",
       Icon: PhoneIcon,
     },
     {
@@ -59,7 +58,7 @@ export const data: CVData = {
       Icon: LocationIcon,
     },
     {
-      value: "github.com/tomstevens94",
+      value: "https://www.github.com/tomstevens94",
       Icon: GithubIcon,
       isHyperlink: true,
     },
@@ -80,7 +79,7 @@ export const data: CVData = {
       companyName: "AXA Health",
       location: "Tunbridge Wells",
       startDate: {
-        month: 8,
+        month: "September",
         year: 2022,
       },
       endDate: null,
@@ -92,5 +91,30 @@ export const data: CVData = {
         "Followed UI/UX designs, ensuring ideal customer/user experience and app performance",
       ],
     },
+    {
+      jobRole: "Warehouse Manager",
+      companyName: "Bonners LTD",
+      location: "Eastbourne",
+      startDate: { month: "September", year: 2019 },
+      endDate: { month: "September", year: 2022 },
+    },
+    {
+      jobRole: "Assistant Manager",
+      companyName: "Mitchells & Butlers",
+      location: "Bexhill-on-Sea",
+      startDate: { month: "October", year: 2016 },
+      endDate: { month: "September", year: 2019 },
+    },
+  ],
+  skills: [
+    { title: "React Native", level: 1 },
+    { title: "React", level: 1 },
+    { title: "Typescript/Javascript", level: 0.95 },
+    { title: "React", level: 0.9 },
+    { title: "NodeJS", level: 0.85 },
+    { title: "HTML / CSS", level: 0.8 },
+    { title: "Jest / Native Testing Library", level: 0.6 },
+    { title: "BrowserStack", level: 0.4 },
+    { title: "Azure", level: 0.3 },
   ],
 };
