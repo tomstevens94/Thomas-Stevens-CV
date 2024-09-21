@@ -4,13 +4,15 @@ import { theme } from "../../../theme/constants";
 const container: CSSProperties = {
   display: "flex",
   flexDirection: "column",
-  gap: theme.gap.large,
+  paddingTop: theme.gap.med,
 };
 
 const listItemContainer: CSSProperties = {
   display: "flex",
   alignItems: "center",
   gap: theme.gap.med,
+  paddingTop: theme.gap.med,
+  paddingBottom: theme.gap.med,
 };
 
 const text = (isHyperlink: boolean): CSSProperties => ({

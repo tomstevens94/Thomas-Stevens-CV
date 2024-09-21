@@ -7,10 +7,16 @@
   padding: 0;
 }
 
+html {
+  background-color: black;
+}
+
 body {
   /* Hard-coded dimensions to match A4 when printing */
   width: 794px;
   height: 1123px;
+
+  background-color: white;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -27,8 +33,26 @@ code {
 
 p {
   font-size: 0.8em;
+  line-height: 18px;
+  white-space: pre-wrap;
 }
 
 a {
   text-decoration: none;
+}
+
+h3.semi-underline {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h3.semi-underline::after {
+  content: "";
+  position: absolute;
+
+  height: 2px;
+  width: 20%;
+  background-color: black;
+  bottom: 0;
+  left: 0;
 }

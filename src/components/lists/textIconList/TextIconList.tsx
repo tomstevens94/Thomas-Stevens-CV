@@ -16,7 +16,11 @@ const TextIconList = (props: Props) => {
   return (
     <div>
       {props.title ? (
-        <h3 style={{ paddingBottom: theme.gap.large }}>{props.title}</h3>
+        <h3
+          className="semi-underline"
+          style={{ paddingBottom: theme.gap.large }}>
+          {props.title}
+        </h3>
       ) : undefined}
       <div style={styles.container}>
         {props.data.map(({ Icon, value, isHyperlink = false }) => (
@@ -25,7 +29,7 @@ const TextIconList = (props: Props) => {
             <a
               href={isHyperlink ? value : undefined}
               style={styles.text(isHyperlink)}>
-              {value}
+              {isHyperlink ? value.replace("https://www.", "") : value}
             </a>
           </div>
         ))}
